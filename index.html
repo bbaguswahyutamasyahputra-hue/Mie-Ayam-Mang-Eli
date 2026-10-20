@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mie Ayam Panglaris Mang Eli menyediakan mie ayam dan minuman dengan harga terjangkau di Telukjambe, Karawang.">
+  <title>Mie Ayam Panglaris Mang Eli</title>
+  <style>
+    :root{--red:#bd2929;--red-dark:#941d1d;--yellow:#ffc928;--ink:#292929;--cream:#fffdf7}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}
+    .container{width:min(1150px,92%);margin:auto}
+    header{background:#fff;box-shadow:0 2px 12px #00000012;position:sticky;top:0;z-index:100}
+    .navbar{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .logo{font-size:19px;font-weight:800;color:var(--red);line-height:1.2}.logo span{display:block;font-size:12px;color:#777;margin-top:4px;font-weight:500}
+    .nav-links{display:flex;align-items:center;gap:22px}.nav-links a{font-size:14px;font-weight:600}.nav-links a:hover{color:var(--red)}
+    .cart-button{border:0;background:var(--red);color:white;border-radius:25px;padding:11px 16px;font-weight:bold;white-space:nowrap}.cart-button:hover,.add-cart:hover,.checkout-button:hover{background:var(--red-dark)}
+    .hero{background:linear-gradient(100deg,#24130ce8,#41220e8c),url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff;min-height:460px;display:flex;align-items:center}
+    .hero-content{max-width:680px;padding:65px 0}.hero-label{display:inline-block;background:var(--yellow);color:#292929;padding:7px 15px;border-radius:25px;font-size:13px;font-weight:bold;margin-bottom:20px}
+    .hero h1{font-size:clamp(35px,6vw,60px);line-height:1.15;margin-bottom:20px}.hero h1 span{color:var(--yellow)}.hero p{max-width:570px;font-size:17px;margin-bottom:28px;color:#f4f4f4}
+    .button{display:inline-block;padding:13px 22px;border-radius:7px;border:0;font-weight:bold;text-align:center;transition:.2s}.button-primary{background:var(--yellow);color:#292929}.button-primary:hover{background:#f0b800;transform:translateY(-2px)}.button-secondary{border:1px solid white;color:white;background:transparent;margin-left:8px}.button-secondary:hover{background:#fff;color:#292929}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;position:relative}.feature{padding:22px;background:#fff;border-radius:12px;box-shadow:0 5px 22px #0000000c;text-align:center}.feature .icon{font-size:29px;margin-bottom:8px}.feature h3{font-size:16px;margin-bottom:4px}.feature p{color:#666;font-size:13px}
+    section{padding:70px 0}.section-heading{text-align:center;margin-bottom:35px}.eyebrow{color:var(--red);font-weight:bold;font-size:13px;text-transform:uppercase;letter-spacing:1.5px}.section-heading h2{font-size:clamp(27px,4vw,36px);margin:8px 0}.section-heading p{color:#777;max-width:600px;margin:auto}
+    .menu-category{font-size:23px;margin:35px 0 20px;padding-left:12px;border-left:5px solid var(--yellow)}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+    .product-card{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 4px 18px #0000000b;transition:transform .25s,box-shadow .25s;border:1px solid #eee}.product-card:hover{transform:translateY(-5px);box-shadow:0 9px 25px #0000001f}
+    .product-image{height:180px;width:100%;object-fit:cover;background:#f0f0f0}.product-info{padding:16px}.product-info h4{font-size:16px;line-height:1.4;min-height:44px;margin-bottom:7px}.product-description{color:#777;font-size:12px;min-height:38px;margin-bottom:10px}.product-price{color:var(--red);font-weight:800;font-size:20px;margin-bottom:14px}
+    .quantity-control{display:flex;align-items:center;justify-content:space-between;border:1px solid #ddd;border-radius:7px;overflow:hidden;margin-bottom:12px}.quantity-control button{background:#f3f3f3;border:0;width:38px;height:38px;font-size:20px}.quantity-control button:hover{background:#e5e5e5}.quantity-control span{font-weight:bold}
+    .add-cart{width:100%;border:0;border-radius:7px;background:var(--red);color:white;padding:11px 8px;font-weight:bold}
+    .about-section{background:#fff4d6}.about-content{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}.about-image{width:100%;height:350px;object-fit:cover;border-radius:15px}.about-text h2{font-size:32px;margin:10px 0 18px}.about-text p{color:#555;margin-bottom:15px}.about-points{list-style:none;margin-top:18px}.about-points li{margin:10px 0;font-weight:600}
+    .location-card{max-width:800px;margin:auto;background:white;padding:35px;border-radius:15px;box-shadow:0 5px 22px #0000000b;text-align:center}.location-icon{font-size:45px;margin-bottom:12px}.location-card h3{margin-bottom:12px}.location-card p{color:#666;margin-bottom:22px}
+    footer{background:#241a17;color:white;padding:40px 0 20px}.footer-content{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:25px}.footer-content h3{color:var(--yellow);margin-bottom:10px}.footer-content p{color:#ddd;font-size:14px;max-width:380px}.copyright{border-top:1px solid #514642;padding-top:18px;text-align:center;color:#bbb;font-size:13px}
+    .cart-overlay{display:none;position:fixed;inset:0;background:#0008;z-index:200}.cart-overlay.active{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(460px,100%);background:#fff;display:flex;flex-direction:column;box-shadow:-5px 0 25px #00000026}
+    .cart-header{padding:22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}.cart-header h2{font-size:22px}.close-cart{border:0;background:#f1f1f1;width:38px;height:38px;border-radius:50%;font-size:23px}
+    .cart-items{flex:1;overflow-y:auto;padding:18px}.empty-cart{text-align:center;color:#777;padding:50px 15px}.empty-cart .icon{font-size:50px;margin-bottom:15px}.cart-item{display:grid;grid-template-columns:65px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid #eee}.cart-item img{width:65px;height:65px;object-fit:cover;border-radius:8px}.cart-item h4{font-size:14px;margin-bottom:4px}.cart-item-price{font-size:13px;color:var(--red);font-weight:bold}.cart-item-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}.mini-quantity{display:flex;align-items:center;gap:10px}.mini-quantity button{width:28px;height:28px;border:1px solid #ddd;border-radius:5px;background:white}.remove-item{border:0;background:transparent;color:var(--red);font-size:12px;margin-top:5px}
+    .cart-footer{border-top:1px solid #eee;padding:20px;background:#fffdf7}.total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:17px}.total-price{font-size:23px;color:var(--red);font-weight:800}.checkout-button{width:100%;padding:14px;border:0;background:var(--red);color:white;border-radius:8px;font-weight:bold;font-size:15px}.continue-button{width:100%;margin-top:10px;padding:11px;background:white;border:1px solid #ddd;border-radius:8px}
+    .checkout-overlay{display:none;position:fixed;inset:0;background:#0009;z-index:300;padding:20px;overflow-y:auto}.checkout-overlay.active{display:block}.checkout-box{width:min(520px,100%);margin:30px auto;padding:28px;background:white;border-radius:14px}.checkout-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:10px}.checkout-title h2{font-size:22px}
+    .form-group{margin-bottom:15px}.form-group label{display:block;font-weight:bold;font-size:14px;margin-bottom:6px}.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:7px;outline-color:var(--red);background:white}.form-group textarea{resize:vertical;min-height:80px}
+    .order-summary{background:#fff8e8;padding:15px;border-radius:8px;margin:18px 0}.order-summary h3{font-size:16px;margin-bottom:10px}.summary-line{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:4px 0}.summary-total{border-top:1px solid #e3d8bd;padding-top:10px;margin-top:10px;font-weight:800;font-size:17px}.whatsapp-button{width:100%;background:#168c4a;color:white;padding:14px;border:0;border-radius:8px;font-weight:bold}.whatsapp-button:hover{background:#10733c}.checkout-note{font-size:12px;color:#777;margin-top:12px}
+    .toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#292929;color:white;padding:12px 22px;border-radius:30px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:500;text-align:center;width:max-content;max-width:90%}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    @media(max-width:900px){.nav-links{gap:12px}.nav-links a{font-size:12px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-image{height:200px}.about-content{gap:25px}}
+    @media(max-width:600px){.navbar{min-height:70px;flex-wrap:wrap;padding:12px 0}.logo{font-size:16px}.nav-links{order:3;width:100%;justify-content:space-between;gap:8px}.nav-links a{font-size:12px}.cart-button{padding:9px 12px;font-size:12px}.hero{min-height:420px;background-position:center}.hero-content{padding:50px 0}.hero h1{font-size:37px}.hero p{font-size:15px}.button{padding:12px 15px;font-size:13px}.features{grid-template-columns:1fr;margin-top:20px}section{padding:50px 0}.product-grid{gap:12px}.product-image{height:140px}.product-info{padding:12px}.product-info h4{font-size:14px;min-height:40px}.product-price{font-size:17px}.product-description{font-size:11px;min-height:45px}.about-content{grid-template-columns:1fr}.about-image{height:240px}.about-text h2{font-size:27px}.location-card{padding:25px 18px}.checkout-box{padding:20px;margin:10px auto}.cart-panel{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="#beranda" class="logo">🍜 MIE AYAM PANGLARIS<span>Mang Eli · Lezat dan Bersahabat</span></a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#menu">Menu</a><a href="#tentang">Tentang</a><a href="#lokasi">Lokasi</a>
+      </nav>
+      <button class="cart-button" onclick="openCart()">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container"><div class="hero-content">
+        <span class="hero-label">🍜 Kuliner Favorit Keluarga</span>
+        <h1>Mie Ayam Panglaris <span>Mang Eli</span></h1>
+        <p>Nikmati aneka mie ayam dan minuman favorit dengan harga terjangkau. Lezat rasanya, bersahabat harganya!</p>
+        <a href="#menu" class="button button-primary">Lihat Menu 🍜</a>
+        <button class="button button-secondary" onclick="openCart()">Pesan Sekarang</button>
+      </div></div>
+    </section>
+
+    <div class="container"><div class="features">
+      <div class="feature"><div class="icon">🍜</div><h3>Menu Beragam</h3><p>Aneka mie ayam dan minuman favorit.</p></div>
+      <div class="feature"><div class="icon">💰</div><h3>Harga Terjangkau</h3><p>Pilihan menu dengan harga bersahabat.</p></div>
+      <div class="feature"><div class="icon">🛒</div><h3>Pesan dengan Mudah</h3><p>Pilih menu dan buat pesanan secara praktis.</p></div>
+    </div></div>
+
+    <section id="menu">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Menu Favorit</span><h2>Daftar Menu Kami</h2><p>Pilih menu favoritmu, tentukan jumlahnya, lalu masukkan ke keranjang belanja.</p></div>
+        <h3 class="menu-category">🍜 Menu Mie Ayam</h3><div class="product-grid" id="food-products"></div>
+        <h3 class="menu-category">🥤 Aneka Minuman</h3><div class="product-grid" id="drink-products"></div>
+      </div>
+    </section>
+
+    <section class="about-section" id="tentang">
+      <div class="container about-content">
+        <img class="about-image" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80" alt="Ilustrasi hidangan mie" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/800x500/f5e7c8/7a251d?text=Mie+Ayam+Mang+Eli';">
+        <div class="about-text"><span class="eyebrow">Tentang Usaha Kami</span><h2>Kenalan dengan Mang Eli!</h2>
+          <p>Mie Ayam Panglaris "Mang Eli" adalah usaha produktif mikro di bidang kuliner yang menyediakan berbagai pilihan mie ayam dan minuman dengan harga terjangkau.</p>
+          <p>Kami hadir untuk menjadi pilihan kuliner bagi masyarakat yang ingin menikmati makanan dan minuman dengan harga yang bersahabat.</p>
+          <ul class="about-points"><li>✅ Pilihan menu makanan dan minuman</li><li>✅ Harga ramah di kantong</li><li>✅ Berlokasi di Telukjambe, Karawang</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="lokasi">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Temukan Kami</span><h2>Lokasi Usaha</h2><p>Kunjungi Mie Ayam Panglaris Mang Eli di kawasan Telukjambe, Karawang.</p></div>
+        <div class="location-card"><div class="location-icon">📍</div><h3>Mie Ayam Panglaris "Mang Eli"</h3>
+          <p>Jl. HS. Ronggowaluyo, Telukjambe, Puseurjaya, Karawang, Jawa Barat.</p>
+          <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Jl+HS+Ronggowaluyo%2C+Telukjambe%2C+Puseurjaya%2C+Karawang%2C+Jawa+Barat" target="_blank" rel="noopener noreferrer">📍 Lihat di Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">
+    <div class="footer-content">
+      <div><h3>🍜 Mie Ayam Panglaris Mang Eli</h3><p>Lezat rasanya, bersahabat harganya! Terima kasih telah memilih dan mendukung usaha kuliner mikro kami.</p></div>
+      <div><h3>Alamat Usaha</h3><p>Jl. HS. Ronggowaluyo, Telukjambe, Puseurjaya, Karawang, Jawa Barat.</p></div>
+    </div>
+    <div class="copyright">&copy; <span id="year"></span> Mie Ayam Panglaris Mang Eli. Semua hak dilindungi.</div>
+  </div></footer>
+
+  <div class="cart-overlay" id="cart-overlay" onclick="handleCartOverlayClick(event)">
+    <div class="cart-panel">
+      <div class="cart-header"><h2>🛒 Keranjang Belanja</h2><button class="close-cart" onclick="closeCart()" aria-label="Tutup keranjang">&times;</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total-row"><span>Total Belanja</span><span class="total-price" id="cart-total">Rp0</span></div>
+        <button class="checkout-button" onclick="openCheckout()">Lanjut ke Checkout</button>
+        <button class="continue-button" onclick="closeCart()">Lanjutkan Belanja</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-overlay" id="checkout-overlay">
+    <div class="checkout-box">
+      <div class="checkout-title"><h2>📝 Form Pemesanan</h2><button class="close-cart" onclick="closeCheckout()" aria-label="Tutup checkout">&times;</button></div>
+      <form id="checkout-form">
+        <div class="form-group"><label for="customer-name">Nama Pelanggan *</label><input type="text" id="customer-name" placeholder="Masukkan nama Anda" required maxlength="100"></div>
+        <div class="form-group"><label for="customer-phone">Nomor WhatsApp Pelanggan *</label><input type="tel" id="customer-phone" placeholder="Contoh: 081234567890" required maxlength="20"></div>
+        <div class="form-group"><label for="order-type">Jenis Pesanan *</label><select id="order-type" required><option value="Makan di tempat">Makan di tempat</option><option value="Dibawa pulang">Dibawa pulang</option></select></div>
+        <div class="form-group"><label for="order-notes">Catatan Tambahan</label><textarea id="order-notes" placeholder="Contoh: Tidak pakai sambal." maxlength="500"></textarea></div>
+        <div class="order-summary"><h3>Ringkasan Pesanan</h3><div id="checkout-summary"></div><div class="summary-line summary-total"><span>Total</span><span id="checkout-total">Rp0</span></div></div>
+        <button type="submit" class="whatsapp-button">💬 Pesan melalui WhatsApp</button>
+        <p class="checkout-note">WhatsApp akan terbuka dengan rincian pesanan yang sudah disiapkan. Periksa pesanan dan tekan tombol kirim di WhatsApp untuk meneruskan pesanan kepada penjual.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Ganti dengan nomor WhatsApp asli pemilik, format kode negara Indonesia tanpa +, spasi, atau tanda hubung.
+    const WHATSAPP_NUMBER = 'GANTI_DENGAN_NOMOR_WHATSAPP';
+    const BUSINESS_NAME = 'Mie Ayam Panglaris Mang Eli';
+
+    const products = [
+      {id:1,name:'Mie Ayam Jumbo',price:10000,category:'food',description:'Mie ayam porsi jumbo.',image:'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80'},
+      {id:2,name:'Mie Ayam Bakso',price:10000,category:'food',description:'Mie ayam dengan tambahan bakso.',image:'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80'},
+      {id:3,name:'Mie Ayam Pangsit',price:10000,category:'food',description:'Mie ayam dengan tambahan pangsit.',image:'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80'},
+      {id:4,name:'Mie Ayam Bakso Pangsit',price:10000,category:'food',description:'Mie ayam dengan bakso dan pangsit.',image:'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80'},
+      {id:5,name:'Es Teh Manis',price:4000,category:'drink',description:'Minuman teh manis yang menyegarkan.',image:'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80'},
+      {id:6,name:'Aqua',price:4000,category:'drink',description:'Air mineral kemasan.',image:'https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&w=700&q=80'},
+      {id:7,name:'Le Minerale',price:4000,category:'drink',description:'Air mineral kemasan.',image:'https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&w=700&q=80'},
+      {id:8,name:'Tea Jus dan Minuman Lainnya',price:2000,category:'drink',description:'Pilihan minuman ekonomis.',image:'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80'}
+    ];
+
+    let cart = loadCart();
+    const selectedQuantities = {};
+
+    function formatRupiah(amount) {
+      return new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(amount);
+    }
+
+    function loadCart() {
+      try {
+        const saved = localStorage.getItem('mieAyamMangEliCart');
+        if (!saved) return [];
+        const parsed = JSON.parse(saved);
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter(item => products.some(p => p.id === item.id) &&
+          Number.isSafeInteger(item.quantity) && item.quantity > 0 && item.quantity <= 1000)
+          .map(item => ({id:item.id,quantity:item.quantity}));
+      } catch (error) { return []; }
+    }
+
+    function saveCart() {
+      try { localStorage.setItem('mieAyamMangEliCart',JSON.stringify(cart)); }
+      catch (error) { showToast('Keranjang tidak dapat disimpan di browser ini.'); }
+    }
+
+    function renderProducts() {
+      const food = document.getElementById('food-products');
+      const drinks = document.getElementById('drink-products');
+      food.innerHTML = '';
+      drinks.innerHTML = '';
+      products.forEach(product => {
+        selectedQuantities[product.id] = 1;
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x400/f5e7c8/7a251d?text=Menu+Mang+Eli';">
+          <div class="product-info">
+            <h4>${product.name}</h4><p class="product-description">${product.description}</p>
+            <div class="product-price">${formatRupiah(product.price)}</div>
+            <div class="quantity-control">
+              <button type="button" onclick="changeSelectedQuantity(${product.id},-1)" aria-label="Kurangi jumlah">−</button>
+              <span id="quantity-${product.id}">1</span>
+              <button type="button" onclick="changeSelectedQuantity(${product.id},1)" aria-label="Tambah jumlah">+</button>
+            </div>
+            <button type="button" class="add-cart" onclick="addToCart(${product.id})">+ Tambah ke Keranjang</button>
+          </div>`;
+        (product.category === 'food' ? food : drinks).appendChild(card);
+      });
+    }
+
+    function changeSelectedQuantity(id,change) {
+      const next = (selectedQuantities[id] || 1) + change;
+      if (next < 1) return;
+      if (next > 1000) return showToast('Maksimal pembelian 1.000 produk.');
+      selectedQuantities[id] = next;
+      document.getElementById(`quantity-${id}`).textContent = next;
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      if (!product) return;
+      const quantity = selectedQuantities[id] || 1;
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        if (existing.quantity + quantity > 1000) return showToast('Maksimal pembelian 1.000 produk.');
+        existing.quantity += quantity;
+      } else cart.push({id,quantity});
+      saveCart();
+      renderCart();
+      showToast(product.name + ' ditambahkan ke keranjang!');
+    }
+
+    function getCartTotal() {
+      return cart.reduce((total,item) => {
+        const product = products.find(p => p.id === item.id);
+        return total + (product ? product.price * item.quantity : 0);
+      },0);
+    }
+
+    function getCartCount() { return cart.reduce((total,item) => total + item.quantity,0); }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      document.getElementById('cart-count').textContent = getCartCount();
+      document.getElementById('cart-total').textContent = formatRupiah(getCartTotal());
+      if (!cart.length) {
+        container.innerHTML = '<div class="empty-cart"><div class="icon">🛒</div><h3>Keranjang Masih Kosong</h3><p>Yuk, pilih menu favoritmu dan tambahkan ke keranjang!</p></div>';
+        return;
+      }
+      container.innerHTML = '';
+      cart.forEach(item => {
+        const product = products.find(p => p.id === item.id);
+        if (!product) return;
+        const row = document.createElement('div');
+        row.className = 'cart-item';
+        row.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='https://placehold.co/100x100/f5e7c8/7a251d?text=Menu';">
+          <div><h4>${product.name}</h4><div class="cart-item-price">${formatRupiah(product.price)} / produk</div>
+            <div class="cart-item-bottom"><div class="mini-quantity">
+              <button type="button" onclick="changeCartQuantity(${product.id},-1)" aria-label="Kurangi">−</button>
+              <span>${item.quantity}</span>
+              <button type="button" onclick="changeCartQuantity(${product.id},1)" aria-label="Tambah">+</button>
+            </div><strong>${formatRupiah(product.price * item.quantity)}</strong></div>
+            <button type="button" class="remove-item" onclick="removeFromCart(${product.id})">Hapus produk</button>
+          </div>`;
+        container.appendChild(row);
+      });
+    }
+
+    function changeCartQuantity(id,change) {
+      const item = cart.find(p => p.id === id);
+      if (!item) return;
+      const next = item.quantity + change;
+      if (next <= 0) return removeFromCart(id);
+      if (next > 1000) return showToast('Maksimal pembelian 1.000 produk.');
+      item.quantity = next;
+      saveCart();
+      renderCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      renderCart();
+      showToast('Produk dihapus dari keranjang.');
+    }
+
+    function openCart() {
+      document.getElementById('cart-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCart() {
+      document.getElementById('cart-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function handleCartOverlayClick(event) {
+      if (event.target.id === 'cart-overlay') closeCart();
+    }
+
+    function openCheckout() {
+      if (!cart.length) return showToast('Keranjang masih kosong. Pilih menu terlebih dahulu.');
+      closeCart();
+      renderCheckoutSummary();
+      document.getElementById('checkout-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCheckout() {
+      document.getElementById('checkout-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function renderCheckoutSummary() {
+      const summary = document.getElementById('checkout-summary');
+      summary.innerHTML = '';
+      cart.forEach(item => {
+        const product = products.find(p => p.id === item.id);
+        if (!product) return;
+        const line = document.createElement('div');
+        line.className = 'summary-line';
+        const name = document.createElement('span');
+        name.textContent = `${product.name} × ${item.quantity}`;
+        const price = document.createElement('span');
+        price.textContent = formatRupiah(product.price * item.quantity);
+        line.append(name,price);
+        summary.appendChild(line);
+      });
+      document.getElementById('checkout-total').textContent = formatRupiah(getCartTotal());
+    }
+
+    document.getElementById('checkout-form').addEventListener('submit',function(event) {
+      event.preventDefault();
+      if (!cart.length) { showToast('Keranjang belanja masih kosong.'); closeCheckout(); return; }
+      if (!/^\d{8,15}$/.test(WHATSAPP_NUMBER)) {
+        alert('Nomor WhatsApp usaha belum diatur. Edit nilai WHATSAPP_NUMBER di file index.html dengan nomor WhatsApp pemilik, format kode negara Indonesia tanpa tanda +.');
+        return;
+      }
+      const name = document.getElementById('customer-name').value.trim();
+      const phone = document.getElementById('customer-phone').value.trim();
+      const orderType = document.getElementById('order-type').value;
+      const notes = document.getElementById('order-notes').value.trim();
+      if (!name || !phone) return showToast('Mohon lengkapi nama dan nomor WhatsApp.');
+      let message = `Halo ${BUSINESS_NAME}!\n\nSaya ingin memesan:\n\n`;
+      cart.forEach((item,index) => {
+        const product = products.find(p => p.id === item.id);
+        if (!product) return;
+        message += `${index+1}. ${product.name}\n   Harga satuan: ${formatRupiah(product.price)}\n   Jumlah: ${item.quantity}\n   Subtotal: ${formatRupiah(product.price * item.quantity)}\n\n`;
+      });
+      message += `TOTAL BELANJA: ${formatRupiah(getCartTotal())}\n\nNama pelanggan: ${name}\nNomor WhatsApp pelanggan: ${phone}\nJenis pesanan: ${orderType}\nCatatan: ${notes || '-'}\n\nMohon konfirmasi pesanan saya. Terima kasih!`;
+      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message),'_blank','noopener,noreferrer');
+    });
+
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'),2500);
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderProducts();
+    renderCart();
+
+    document.addEventListener('keydown',event => {
+      if (event.key === 'Escape') {
+        closeCart();
+        closeCheckout();
+      }
+    });
+  </script>
+</body>
+</html>
